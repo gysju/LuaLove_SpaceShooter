@@ -1,18 +1,18 @@
-Enemy = Entity.extend(Object);
+Enemy = Entity:extend();
 
-function Enemy.new(self)
-  Enemy.super.new()
-
+function Enemy:new()
+  print("Enemy New")
+  Enemy.super.new(self)
 end
 
-function Enemy.load()
-
+function Enemy:load()
+  Enemy.super.load()
 end
 
-function Enemy.update()
-
+function Enemy:update(dt)
+  Enemy.super.update(dt)
 end
 
-function Enemy.draw()
-
+function Enemy:draw()
+  love.graphics.circle("line", self.x, self.y, 10, 8)
 end

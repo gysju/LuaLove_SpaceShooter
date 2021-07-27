@@ -1,17 +1,20 @@
-Entity = Object.extend(Object);
+Entity = Object:extend()
 
-function Entity.new(self)
+function Entity:new()
+  print("Entity New")
+  self.x = 10
+  self.y = 10
+  self.speed = 100
+end
+
+function Entity:load()
 
 end
 
-function Entity.load()
+function Entity:update(dt)
 
 end
 
-function Entity.update()
-
-end
-
-function Entity.draw()
+function Entity:draw()
 
 end
