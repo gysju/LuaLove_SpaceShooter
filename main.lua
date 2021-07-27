@@ -12,12 +12,11 @@ function love.load()
 
   player.x = 100
   enemy.y = 200
-  print("Love New")
-
 end
 
 function love.update(dt)
   player:update(dt)
+  enemy:update(dt)
 end
 
 function love.draw()

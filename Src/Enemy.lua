@@ -1,7 +1,6 @@
 Enemy = Entity:extend();
 
 function Enemy:new()
-  print("Enemy New")
   Enemy.super.new(self)
 end
 
@@ -14,5 +13,5 @@ function Enemy:update(dt)
 end
 
 function Enemy:draw()
-  love.graphics.circle("line", self.x, self.y, 10, 8)
+  Enemy.super.draw(self)
 end

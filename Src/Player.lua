@@ -1,7 +1,6 @@
 Player = Entity:extend()
 
 function Player:new()
-  print("Player New")
   Player.super.new(self)
 end
 
@@ -14,5 +13,5 @@ function Player:update(dt)
 end
 
 function Player:draw()
-  love.graphics.circle("line", self.x, self.y, 10, 8)
+  Player.super.draw(self)
 end

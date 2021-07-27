@@ -1,10 +1,10 @@
 Entity = Object:extend()
 
 function Entity:new()
-  print("Entity New")
   self.x = 10
   self.y = 10
   self.speed = 100
+  self.radius = 50;
 end
 
 function Entity:load()
@@ -16,5 +16,5 @@ function Entity:update(dt)
 end
 
 function Entity:draw()
-
+  love.graphics.circle("line", self.x, self.y, self.radius, 8)
 end
