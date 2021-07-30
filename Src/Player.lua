@@ -8,19 +8,19 @@ function Player:move(dt)
   print(self.x)
   print(self.speed)
 
-  if love.keyboard.isDown("right") then
+  if love.keyboard.isDown("right") and self.x < ScreenSizeX - self.radius then
     self.x = self.x + self.speed * dt;
   end
 
-  if love.keyboard.isDown("left") then
+  if love.keyboard.isDown("left") and self.x > self.radius then
     self.x = self.x - self.speed * dt;
   end
 
-  if love.keyboard.isDown("down") then
+  if love.keyboard.isDown("down") and self.y < ScreenSizeY - self.radius then
     self.y = self.y + self.speed * dt;
   end
 
-  if love.keyboard.isDown("up") then
+  if love.keyboard.isDown("up") and self.y > self.radius then
     self.y = self.y - self.speed * dt;
   end
 end
